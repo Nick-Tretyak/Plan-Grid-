@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Home/Home';
+import DeskName from './DeskName/DeskName';
+import Header from './Header/Header';
+import NameOfColumns from './NameOfColumns/NameOfColumns';
+import Desk from './Desk/Desk';
+import TaskName from './TaskName/TaskName';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/desk-name/*' element={<DeskName />} /> */}
+        {/* <Route path='/task-name/*' element={<TaskName />} /> */}
+        {/* <Route path='/columns-name/*' element={<NameOfColumns />} /> */}
+        {/* <Route path='/cards-name/*' element={<NameOfCards />} /> */}
+        <Route path='/desk/*' element={<Desk />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
+export default App

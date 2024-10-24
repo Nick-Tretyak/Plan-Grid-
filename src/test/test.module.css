@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: solid rgb(255, 0, 200) 10px;
+}
+
+.block1 {
+    background-color: rgb(116, 37, 37);
+}
+
+.block2 {
+    background-color: rgb(59, 172, 50);
+}
+
+.block3 {
+    background-color: rgb(27, 33, 150);
+}
+
+.block4 {
+    background-color: rgb(27, 176, 179);
+}
+
+.block5 {
+    background-color: rgb(144, 26, 162);
+}
+
+.block6 {
+    background-color: rgb(171, 193, 12);
+}
+
+.block7 {
+    background-color: rgb(101, 15, 118);
+}
+
+.block8 {
+    background-color: rgb(255, 0, 0);
+}
+
+.flexItem {
+    text-align: center;
+    font: 900 60px "Roboto", sans-serif;
+    color: white;
+}
+
+/* @media screen and (max-width:650px){
+    .container{
+        flex-direction: column
+    };
+} */
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-flow: column wrap;
+}
